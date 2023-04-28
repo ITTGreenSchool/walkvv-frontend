@@ -3,7 +3,7 @@ import { SectionList } from "react-native";
 import { Appbar, Divider, List, Text } from "react-native-paper";
 import FootpathListTile from "../../../components/FootpathsListScreen/FootpathListTile/FootpathListTile";
 import { FootpathsListScreenProps } from "../../../navigation/FootpathStack";
-import { Footpath, FootpathStatus } from "../../../types/generic/Footpath";
+import { Footpath, FootpathStatus } from "../../../types/Footpath";
 import styles from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 

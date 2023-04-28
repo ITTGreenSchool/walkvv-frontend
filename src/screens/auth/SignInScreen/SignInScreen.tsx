@@ -7,35 +7,34 @@ import {
 	HelperText,
 	TextInput,
 } from "react-native-paper";
-import styles from "./styles";
 import { Controller, useForm } from "react-hook-form";
-import { AuthenticationError } from "../../../types/auth/AuthenticationError";
+import styles from "./styles";
 import { SignInScreenProps } from "../../../navigation/AuthStack";
 import {Image} from "react-native";
-import { SvgUri } from "react-native-svg";
 
+// Form data type
 type formData = {
 	username: string;
 	password: string;
 };
 
+// Sign in screen is a component that allows the user to sign in
 const SignInScreen = ({ navigation }: SignInScreenProps) => {
+
+	// Sets the title of the screen
 	React.useLayoutEffect(() => {
 		navigation.setOptions({ title: "Login" });
 	});
 
-	const {
-		login,
-		inProgress: authInProgress,
-		error: authError,
-	} = useContext(AuthContext);
+	// Gets the login function from the auth context
+	const {login} = useContext(AuthContext)
 
-	const form = useForm<formData>();
 
 	function onSubmit({ username, password }: formData) {
 		login(username, password);
 	}
 
+	const form = useForm<formData>();
 	return (
 		<View style={styles.mainView}>
 

@@ -7,7 +7,7 @@ import FootpathBarCodeScannerModal from "../screens/footpaths/FootpathBarCodeSca
 import FootpathDetailsScreen from "../screens/footpaths/FootpathDetailsScreen/FootpathDetailsScreen";
 import FootpathsListScreen from "../screens/footpaths/FootpathsListScreen/FootpathsListScreen";
 import AccountSettingsScreen from "../screens/settings/AccountSettingsScreen/AccountSettingsScreen";
-import { Footpath } from "../types/generic/Footpath";
+import { Footpath } from "../types/Footpath";
 
 const Stack = createStackNavigator<FootpathStackParamList>();
 
